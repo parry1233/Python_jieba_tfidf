@@ -19,6 +19,7 @@ for playerAndrank in rank:
 player_collect = " ".join(Players)
 wordCloudFileName = "2020_UEFA_rank_wordCloud.png"
 img_mask = np.array(Image.open('adidas_logo.png'))
+# collocations=False  can avoid wordcloud to output same word twice.
 wordCloudResult = WordCloud(background_color='white',mask=img_mask,font_path='SoukouMincho.ttf',collocations=False).generate(player_collect)
 plt.figure(figsize=(10,5))
 plt.imshow(wordCloudResult)
