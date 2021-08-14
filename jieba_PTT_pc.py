@@ -9,7 +9,7 @@ from PIL import Image
 from bs4 import BeautifulSoup
 
 req = requests.session()
-pc_list = req.get('https://www.ptt.cc/bbs/PC_Shopping/M.1599554022.A.953.html',verify=False)
+pc_list = req.get('https://www.ptt.cc/bbs/Stock/M.1623911024.A.9DE.html',verify=False)
 pc_soup = BeautifulSoup(pc_list.text)
 file_temp=[]
 title_name = pc_soup('title')[0].text
